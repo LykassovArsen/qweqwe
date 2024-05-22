@@ -269,12 +269,39 @@
             opacity: 0.2;
         }
 
+        .text-animation {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%; 
+            color: white;
+            opacity: 0;
+            animation: appear-text 5s forwards;
+            text-align: center;
+        }
 
-      
+        @keyframes appear-text {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
-       
+        .typing-animation {
+            overflow: hidden;
+            white-space: normal;
+            display: inline-block;
+            animation: typing 5s steps(40, end);
+            max-width: 70ch;
+        }
 
-     
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
         .whitediv h2 {
             margin-top: 0;
             margin-bottom: 40px; 
@@ -578,7 +605,8 @@
                 </div>
             </div>
         </div>
-    
+        
+   
     
 </body>
 </html>
