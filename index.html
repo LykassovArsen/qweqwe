@@ -87,41 +87,41 @@ function incLks(el) {
     lkCntEl.textContent = crntCnt + 1;
 }
 
-let pst = document.getElementById("fstPst");
-let pstBox = document.getElementById("pstBox");
+const pst = document.getElementById("fstPst");
+const pstBox = document.getElementById("pstBox");
 
-let imgurls = [
+const imgurls = [
     "https://ir.ozone.ru/s3/multimedia-o/c1000/6562172424.jpg",
     "https://llfalmaty.kz/upload/team_logo/68232_133886_23.jpg"
 ];
 
-let avtrurls = [
+const avtrurls = [
     "avtr1.jpg",
     "avtr2.jpg"
 ];
 
-let nAvtr1 = "https://img4.labirint.ru/rc/e431a3976571a8eb56caf7ea7d1221ab/363x561q80/books28/276454/cover.jpg?1302877608";
-let nTxt1 = "Бочонок на шее сенбернара: что несёт собака-спасатель замерзающим в снегах Сенбернаров часто изображают с бочонками на шее. Вроде как эти собаки-спасатели несут алкоголь, чтобы привести в чувство людей, пострадавших в горах. Так ли это и что на самом деле в бочонке у собаки-спасателя? На самом деле спасателей-сенбернаров обязательно снабжают специальными пакетами первой помощи пострадавшим. Собака может первой добраться до человека под завалами и предоставить ему... вовсе не глоток алкоголя, а пищу и воду для поддержания сил, плед для обогрева, а также набор первой помощи.";
-let nImg1 = "https://facts.museum/img/facts/694.jpg";
+const nAvtr1 = "https://img4.labirint.ru/rc/e431a3976571a8eb56caf7ea7d1221ab/363x561q80/books28/276454/cover.jpg?1302877608";
+const nTxt1 = "Бочонок на шее сенбернара: что несёт собака-спасатель замерзающим в снегах Сенбернаров часто изображают с бочонками на шее. Вроде как эти собаки-спасатели несут алкоголь, чтобы привести в чувство людей, пострадавших в горах. Так ли это и что на самом деле в бочонке у собаки-спасателя? На самом деле спасателей-сенбернаров обязательно снабжают специальными пакетами первой помощи пострадавшим. Собака может первой добраться до человека под завалами и предоставить ему... вовсе не глоток алкоголя, а пищу и воду для поддержания сил, плед для обогрева, а также набор первой помощи.";
+const nImg1 = "https://facts.museum/img/facts/694.jpg";
 
-let nAvtr2 = "https://static.mk.ru/upload/entities/2018/04/26/articles/detailPicture/00/63/3b/09/e35fc66bb21b43e3ccab5593d16e16cd.jpg";
-let nTxt2 = "Как завязать галстук и не задохнуться! Восточный узел по праву считается одним из самых простых способов завязывания галстука. И все же встретить этот узел можно не так уж часто. Другие его названия — красный узел, малый узел. Восточный узел используется для завязывания галстуков, выполненных из тяжелого материала, в том числе вязаных, плетеных и шерстяных. К преимуществам этого узла можно отнести то, что он имеет небольшой размер, который подчеркивает достоинства тяжелого материала. А вот недостатком является то, что его завязывание требует повышенного внимания. В противном случае вы рискуете получить небрежную, неправильно выполненную форму узла, или же галстук может самопроизвольно развязаться, иногда в самый неподходящий момент.";
-let nImg2 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbj4jApEAgHdo-sUtQ9lf78E5sdOH5KFaGTw&usqp=CAU";
+const nAvtr2 = "https://static.mk.ru/upload/entities/2018/04/26/articles/detailPicture/00/63/3b/09/e35fc66bb21b43e3ccab5593d16e16cd.jpg";
+const nTxt2 = "Как завязать галстук и не задохнуться! Восточный узел по праву считается одним из самых простых способов завязывания галстука. И все же встретить этот узел можно не так уж часто. Другие его названия — красный узел, малый узел. Восточный узел используется для завязывания галстуков, выполненных из тяжелого материала, в том числе вязаных, плетеных и шерстяных. К преимуществам этого узла можно отнести то, что он имеет небольшой размер, который подчеркивает достоинства тяжелого материала. А вот недостатком является то, что его завязывание требует повышенного внимания. В противном случае вы рискуете получить небрежную, неправильно выполненную форму узла, или же галстук может самопроизвольно развязаться, иногда в самый неподходящий момент.";
+const nImg2 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbj4jApEAgHdo-sUtQ9lf78E5sdOH5KFaGTw&usqp=CAU";
 
-let nAvtr3 = "https://alphastyles.ru/wp-content/uploads/2018/09/dizayn-2.jpg";
-let nTxt3 = "<b>В автограде установят трехметровую скульптуру в виде челна. </b> В Набережных Челнах установят трехметровую скульптуру в виде герба города. Металлический челн под парусом появится в августе. Его изготовлением занимается одно из предприятий города, пишут «Челнинские известия»Идея установки скульптуры принадлежит благотворительному фонду «Люди Татарстана».";
-let nImg3 = "";
+const nAvtr3 = "https://alphastyles.ru/wp-content/uploads/2018/09/dizayn-2.jpg";
+const nTxt3 = "<b>В автограде установят трехметровую скульптуру в виде челна. </b> В Набережных Челнах установят трехметровую скульптуру в виде герба города. Металлический челн под парусом появится в августе. Его изготовлением занимается одно из предприятий города, пишут «Челнинские известия»Идея установки скульптуры принадлежит благотворительному фонду «Люди Татарстана».";
+const nImg3 = "";
 
-let nAvtr4 = "https://ustinka.kz/upload/iblock/430/jf4z7zr60wq8dux0bgpxb4uu8fh2b54n/kakaya_pogoda_ozhidaet_kazakhstantsev_zimoy_s_noyabrya_2023_po_mart_2024-_1_.jpg";
-let nTxt4 = "<b>В пятницу в Тюменская область передохнет от морозов.</b> В пятницу в Тюменской области морозы немного ослабнут, местами пройдет снег. Ветер усилится, облака затянут небо, атмосферное давление приходит в норму. В Тюмени утром -30 градусов, юго-восточный ветер, днем -26 градусов, облачно, ближе к вечеру снег. Вечером — 19 градусов, южный ветер, ветер до 12 м/с. В Заводоуковске утром -32 градусов, днем -21 градус, облачно, ветер до 12 м/с. К вечеру -20 градусов. В Ишиме утром -35 градусов, юго-восточный ветер, днем -27 градусов, ветер до 11 м/с, облачно с прояснениями, к вечеру -21 градус. В Тобольске с утра -30 градусов, днем -24 градуса, облачно. К вечеру -20 градусов, снег, юго-восточный ветер. В Ялуторовске с утра -30 градусов, юго-восточный ветер. Днем -22 градуса, облачно. К вечеру -20 градусов, ветер до 12 м/с. По народным приметам, если вечером на небе появились облака – жди перемены погоды.";
-let nImg4 = "https://i.pinimg.com/736x/90/23/a0/9023a0492091392338d04a31247adbaf.jpg";
+const nAvtr4 = "https://ustinka.kz/upload/iblock/430/jf4z7zr60wq8dux0bgpxb4uu8fh2b54n/kakaya_pogoda_ozhidaet_kazakhstantsev_zimoy_s_noyabrya_2023_po_mart_2024-_1_.jpg";
+const nTxt4 = "<b>В пятницу в Тюменская область передохнет от морозов.</b> В пятницу в Тюменской области морозы немного ослабнут, местами пройдет снег. Ветер усилится, облака затянут небо, атмосферное давление приходит в норму. В Тюмени утром -30 градусов, юго-восточный ветер, днем -26 градусов, облачно, ближе к вечеру снег. Вечером — 19 градусов, южный ветер, ветер до 12 м/с. В Заводоуковске утром -32 градусов, днем -21 градус, облачно, ветер до 12 м/с. К вечеру -20 градусов. В Ишиме утром -35 градусов, юго-восточный ветер, днем -27 градусов, ветер до 11 м/с, облачно с прояснениями, к вечеру -21 градус. В Тобольске с утра -30 градусов, днем -24 градуса, облачно. К вечеру -20 градусов, снег, юго-восточный ветер. В Ялуторовске с утра -30 градусов, юго-восточный ветер. Днем -22 градуса, облачно. К вечеру -20 градусов, ветер до 12 м/с. По народным приметам, если вечером на небе появились облака – жди перемены погоды.";
+const nImg4 = "https://i.pinimg.com/736x/90/23/a0/9023a0492091392338d04a31247adbaf.jpg";
 
-for (let i = 0; i < 100; i++) {
-    let nPst1 = pst.cloneNode(true);
-    let nAvtrEl1 = nPst1.querySelector(".avtr");
-    let nAuth1 = nPst1.querySelector(".auth");
-    let nTxtEl1 = nPst1.querySelector(".txt");
-    let nImgEl1 = nPst1.querySelector(".img");
+for (const i = 0; i < 100; i++) {
+    const nPst1 = pst.cloneNode(true);
+    const nAvtrEl1 = nPst1.querySelector(".avtr");
+    const nAuth1 = nPst1.querySelector(".auth");
+    const nTxtEl1 = nPst1.querySelector(".txt");
+    const nImgEl1 = nPst1.querySelector(".img");
 
     nAvtrEl1.setAttribute("src", nAvtr1);
     nAuth1.textContent = "ВСЕ О СОБАКАХ";
@@ -130,11 +130,11 @@ for (let i = 0; i < 100; i++) {
 
     pstBox.appendChild(nPst1);
 
-    let nPst2 = pst.cloneNode(true);
-    let nAvtrEl2 = nPst2.querySelector(".avtr");
-    let nAuth2 = nPst2.querySelector(".auth");
-    let nTxtEl2 = nPst2.querySelector(".txt");
-    let nImgEl2 = nPst2.querySelector(".img");
+    const nPst2 = pst.cloneNode(true);
+    const nAvtrEl2 = nPst2.querySelector(".avtr");
+    const nAuth2 = nPst2.querySelector(".auth");
+    const nTxtEl2 = nPst2.querySelector(".txt");
+    const nImgEl2 = nPst2.querySelector(".img");
 
     nAvtrEl2.setAttribute("src", nAvtr2);
     nAuth2.textContent = "Dr. Dolph";
@@ -143,11 +143,11 @@ for (let i = 0; i < 100; i++) {
 
     pstBox.appendChild(nPst2);
 
-    let nPst3 = pst.cloneNode(true);
-    let nAvtrEl3 = nPst3.querySelector(".avtr");
-    let nAuth3 = nPst3.querySelector(".auth");
-    let nTxtEl3 = nPst3.querySelector(".txt");
-    let nImgEl3 = nPst3.querySelector(".img");
+    const nPst3 = pst.cloneNode(true);
+    const nAvtrEl3 = nPst3.querySelector(".avtr");
+    const nAuth3 = nPst3.querySelector(".auth");
+    const nTxtEl3 = nPst3.querySelector(".txt");
+    const nImgEl3 = nPst3.querySelector(".img");
 
     nAvtrEl3.setAttribute("src", nAvtr3);
     nAuth3.textContent = "BlvdPress";
@@ -156,11 +156,11 @@ for (let i = 0; i < 100; i++) {
 
     pstBox.appendChild(nPst3);
 
-    let nPst4 = pst.cloneNode(true);
-    let nAvtrEl4 = nPst4.querySelector(".avtr");
-    let nAuth4 = nPst4.querySelector(".auth");
-    let nTxtEl4 = nPst4.querySelector(".txt");
-    let nImgEl4 = nPst4.querySelector(".img");
+    const nPst4 = pst.cloneNode(true);
+    const nAvtrEl4 = nPst4.querySelector(".avtr");
+    const nAuth4 = nPst4.querySelector(".auth");
+    const nTxtEl4 = nPst4.querySelector(".txt");
+    const nImgEl4 = nPst4.querySelector(".img");
 
     nAvtrEl4.setAttribute("src", nAvtr4);
     nAuth4.textContent = "DailyWeather";
