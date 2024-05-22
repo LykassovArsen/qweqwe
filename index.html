@@ -1,175 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>  
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: white; 
+            padding: 20px; 
+            position: fixed; 
+            width: 100%; 
+            z-index: 1; 
+            display: flex; 
+            justify-content: left; 
+            align-items: left;
+            text-align: left;
+        }
+        .blackdiv {
+            color: white; 
+            background-color: rgb(0, 0, 0); 
+            width: 100%; 
+            height: 100vh; 
+            display: flex; 
+            justify-content: flex-start; 
+            align-items: center; 
+            flex-direction: row; 
+            text-align: left; 
+            position: relative; 
+        }
+        .blackdiv3 {
+            color: white; 
+            background-color: rgb(0, 0, 0); 
+            width: 100%; 
+            height: 50vh; 
+            display: flex; 
+            justify-content: flex-start; 
+            align-items: center; 
+            flex-direction: row; 
+            text-align: left; 
+            position: relative; 
+        }
+        .spacebetween{
+            color: black;
+            background-color: white ;
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            height: 5px;
+        
+        }
+        .blackdiv4 {
+            color: white; 
+            background-color: rgb(0, 0, 0); 
+            width: 100%; 
+            height: 70vh;
+            /* padding-top: 70px;
+            margin-top: 20px; */
+            text-align: center;
+            /* padding-left: 50%; */
+            box-sizing: border-box;
+            position: relative;
+        }
+        .blackdiv5 {
+            color: white; 
+            background-color: rgb(0, 0, 0); 
+            width: 100%; 
+            height: 60vh;
+            display: flex;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .blackdiv6 {
+            color: white; 
+            background-color: rgb(0, 0, 0); 
+            width: 100%; 
+            height: 55vh;
+            display: flex;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .blackdiv4 h1 {
+            font-size: 2em;
+            margin: 0;
+            padding: 0;
+        }
+        .whitediv {
+            color: black;
+            background-color: white ;
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
+        }
+        .whitediv4 {
+            color: black;
+            background-color: white ;
+            width:100%;
+            height: auto;
+            display:flex;
+            flex-direction: row-reverse;
+            padding: 50px 0;
+            position: absolute;
+        }
+        .whitediv1 {
+            color: black;
+            background-color: white ;
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
+            height: 37vh;
+        }
+        .whitediv h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .whitediv img {
+            margin-top: 20px;
+            width: 50px;
+            height: auto;
+        }
+
+        .skill-container {
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            margin-left: 20px; 
+            margin-right: 20px; 
+            width: 100px; 
+        }
+
+        .skill-level {
+            display: flex;
+            flex-direction: row-reverse; 
+        }
+
+        .skill-level .circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: black;
+            margin-right: 10px;
+        }
+
+        .circle.filled {
+            background-color: white;
+        }
+        .gradientdiv{
+            height:100vh;
+            display:flex;
+        }
+        .big-text {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            margin-left: 10vw; 
+            margin-top: -20vh; 
+            text-align: left;
+            position: absolute; 
+            z-index: 2; 
+        }
+        .big-text h1 {
+            font-size: 3em;
+            margin-bottom: 20px; 
+        }
+        .big-text a {
+            color: white;
+            text-decoration: underline;
+            margin-left: 0.5em; 
+            display: flex;
+        }
+        .image-container {
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            position: absolute; 
+            overflow: hidden; 
+            right: 5%; 
+            top: -10%; 
+            bottom: 0; 
+            z-index: 1; 
+        }
+
+        .image-container img {
+            max-width: 500%; 
+            height: auto; 
+            z-index:+3;
+            display: flex;
+            align-items: left;
+            margin-left: 100px;
+        }
+
+        .left-containers {
+            position: relative;
+            z-index: 2;
+            margin-top: 35vh; 
+            margin-left: 10vw; 
+            display: flex;
+            flex-direction: row;
+            gap: 10px; 
+        }
+
+        .left-container1 {
+            background-color: rgb(255, 255, 255); 
+            color: rgb(0, 0, 0); 
+            padding: 1px 10px; 
+            border-radius: 30px; 
+            width: 100px;
+            text-align: center;
+        }
+
+        .left-container2 {
+            background-color: rgb(0, 0, 0); 
+            color: rgb(255, 255, 255); 
+            padding: 1px 10px; 
+            border-radius: 30px; 
+            border: 2px solid white; 
+            width: 100px;
+            text-align: center;
+        }
+
+        .left-container3{
+            background-color: rgba(255, 255, 255, 0.93); 
+            color: rgb(0, 0, 0); 
+            padding: 1px 10px; 
+            border-radius: 30px; 
+            text-align: center;
+            width: 100px;
+        }
+
+        .left-container4{
+            background-color: rgb(0, 0, 0); 
+            color: rgb(255, 255, 255); 
+            padding: 1px 10px; 
+            border-radius: 30px; 
+            border: 2px solid white; 
+            width: 100px;
+            text-align: center;
+        }
+        .image2{
+            margin-top: 150px;
+            position: absolute;
+            display: flex;
+        }
+        .blackdiv2::before {
+            content: " \25A4 \25A5 \25A6 \25A7 \25A8 \25A9 \25A4 \25A5 \25A6 \25A7 \25A8 \25A9 \25A4 \25A5 \25A6 \25A7 \25A8 \25A9  ";
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            opacity: 0.2;
+        }
+
+        .text-animation {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%; 
+            color: white;
+            opacity: 0;
+            animation: appear-text 5s forwards;
+            text-align: center;
+        }
+
+        @keyframes appear-text {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .typing-animation {
+            overflow: hidden;
+            white-space: normal;
+            display: inline-block;
+            animation: typing 5s steps(40, end);
+            max-width: 70ch;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .whitediv h2 {
+            margin-top: 0;
+            margin-bottom: 40px; 
+            font-size: 3em; 
+            text-align: left; 
+            margin-left: 10%; 
+        }
+        .project-container {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            margin-top: 50px; 
+            padding: 0 10%; 
+        }
+
+        .project-box {
+            flex: 1; 
+            text-align: center; 
+            transition: transform 0.3s ease; 
+            margin-bottom: 50px; 
+            border: 3px solid white;
+            border-radius: 30px;
+            max-width: 300px; 
+            overflow: hidden; 
+        }
+
+        .project-box img {
+            width: 100%; 
+            height: auto; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        }
+        .project-box1 {
+            flex: 1; 
+            text-align: center; 
+            transition: transform 0.3s ease; 
+            margin-bottom: 50px; 
+            border: 3px solid white;
+            border-radius: 30px;
+            max-width: 300px; 
+            overflow: hidden; 
+        }
+
+        .project-box1 img {
+            width: 100%; 
+            height: auto; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        }
+        .project-box p {
+            margin-top: 20px; 
+            font-size: 1.5em; 
+        }
+        .tetraedr1{
+            left:30px;
+            border-radius: 30px;
+            display: flex;
+            border: 2px solid white;
+            width: 500px;
+            height: 300px;
+            left: 0; 
+            margin-left: 400px; 
+            position: absolute; 
+            margin-top: 20px;
+        }
+
+        .reflected-blog {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            margin-top: 20px; 
+        }
+
+        .tetraedr1, .tetraedr2 {
+        left: 670px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid white;
+        width: auto;
+        height: auto;
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 30px;
+        padding: 20px;
+        align-items: center; 
 }
-.post {
-    width: 300px;
-    margin: 20px auto;
-    text-align: left;
-    padding: 20px;
-    border: 2px solid black;
-    border-radius: 40px;
-}
-.hdr {
+
+        .text-container {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-}
-.avtr {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.auth {
-    font-weight: bold;
-}
-.txt {
-    margin-top: 10px;
-}
-.img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-}
-.lkBox {
-    border-radius: 20px;
-    border: 2px solid grey;
-    padding: 5px;
-    margin-top: 10px;
-    text-align: left;
-    width: 60px;
-}
-.lkIcn {
-    cursor: pointer;
-}
-.lkCnt {
-    margin-left: 5px;
-}
-.hdrObsh{
-    background-color: black;
-    font-size: 2em;
-    color: white;
-    height: 50px;
+    text-align: center;
+    height: 100%;
     width: 100%;
 }
-</style>
+
+.tetraedr1 img, .tetraedr2 img {
+    max-width: 100%;
+    border-radius: 30px;
+    margin-bottom: 20px; 
+}
+
+.tetraedr1 h2, .tetraedr2 h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+}
+
+
+        .reflected-blog > div {
+            flex: 1; 
+        }
+
+        .contact-section {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 50px 0;
+        position: relative;
+        }
+
+        .contact-section h1 {
+        margin-bottom: 30px;
+        }
+
+        .contact-section form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+        .contact-section label,
+        .contact-section input,
+        .contact-section textarea {
+        margin-bottom: 20px;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+        width: 80%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        }
+
+        .contact-section input[type="submit"] {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+
+        .contact-section input[type="submit"]:hover {
+        background-color: gray;
+        }
+
+    </style>
 </head>
 <body>
-<div class="hdrObsh">
-AGram - the most popular social network
-</div>
-<div id="pstBox">
-    <div class="post" id="fstPst">
-        <div class="hdr">
-            <img class="avtr" src="https://t3.ftcdn.net/jpg/05/43/29/02/360_F_543290296_snhXYYelZwXmXoo1sUoVMD54GXTPguWH.jpg" alt="Аватар">
-            <div class="auth">AGram</div>
+    <div class="header">
+        <div style="font-weight: bold; font-size: 24px;">Arsen Lykassov                |</div>
+        <div class="nav-link">Explore                  А</div>
+        <div class="nav-link">bout                      С</div>
+        <div class="nav-link">ontact</div>
+    </div>
+    
+    <div class="blackdiv">
+        <div class="big-text">
+            <h1>Hi, I'M ARSEN.</h1>
+            <a>Student of the Kazakhstan Physics and Mathematics School, FIZMAT.</a>
         </div>
-        <div class="txt">Update 1.0.0 "Riot of colors" is already out!</div>
-        <img class="img" src="https://masterpiecer-images.s3.yandex.net/518ce614577111ee95fc8e3ad859c919:upscaled" alt="">
-        <!-- Блок лайка -->
-        <div class="lkBox">
-            <span class="lkIcn" onclick="incLks(this)">👍</span>
-            <span class="lkCnt">0</span>
+        <div class="image-container">
+            <img src="https://i.ibb.co.com/QMdS2KP/Fotoram3-io.jpg" >
+        </div>
+        <div class="left-containers">
+            <div class="left-container1">
+                <h2> Math</h2>
+            </div>
+            <div class="left-container2">
+                <h2>English</h2>
+            </div>
+            <div class="left-container3">
+                <h2>IT</h2>
+            </div>
+            <div class="left-container4">
+                <h2>Physics</h2>
+            </div>
         </div>
     </div>
-</div>
-
-<script>
-function incLks(el) {
-    var lkCntEl = el.nextElementSibling;
-    var crntCnt = parseInt(lkCntEl.textContent);
-    lkCntEl.textContent = crntCnt + 1;
-}
-
-const pst = document.getElementById("fstPst");
-const pstBox = document.getElementById("pstBox");
-
-const imgurls = [
-    "https://ir.ozone.ru/s3/multimedia-o/c1000/6562172424.jpg",
-    "https://llfalmaty.kz/upload/team_logo/68232_133886_23.jpg"
-];
-
-const avtrurls = [
-    "avtr1.jpg",
-    "avtr2.jpg"
-];
-
-const nAvtr1 = "https://img4.labirint.ru/rc/e431a3976571a8eb56caf7ea7d1221ab/363x561q80/books28/276454/cover.jpg?1302877608";
-const nTxt1 = "Бочонок на шее сенбернара: что несёт собака-спасатель замерзающим в снегах Сенбернаров часто изображают с бочонками на шее. Вроде как эти собаки-спасатели несут алкоголь, чтобы привести в чувство людей, пострадавших в горах. Так ли это и что на самом деле в бочонке у собаки-спасателя? На самом деле спасателей-сенбернаров обязательно снабжают специальными пакетами первой помощи пострадавшим. Собака может первой добраться до человека под завалами и предоставить ему... вовсе не глоток алкоголя, а пищу и воду для поддержания сил, плед для обогрева, а также набор первой помощи.";
-const nImg1 = "https://facts.museum/img/facts/694.jpg";
-
-const nAvtr2 = "https://static.mk.ru/upload/entities/2018/04/26/articles/detailPicture/00/63/3b/09/e35fc66bb21b43e3ccab5593d16e16cd.jpg";
-const nTxt2 = "Как завязать галстук и не задохнуться! Восточный узел по праву считается одним из самых простых способов завязывания галстука. И все же встретить этот узел можно не так уж часто. Другие его названия — красный узел, малый узел. Восточный узел используется для завязывания галстуков, выполненных из тяжелого материала, в том числе вязаных, плетеных и шерстяных. К преимуществам этого узла можно отнести то, что он имеет небольшой размер, который подчеркивает достоинства тяжелого материала. А вот недостатком является то, что его завязывание требует повышенного внимания. В противном случае вы рискуете получить небрежную, неправильно выполненную форму узла, или же галстук может самопроизвольно развязаться, иногда в самый неподходящий момент.";
-const nImg2 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbj4jApEAgHdo-sUtQ9lf78E5sdOH5KFaGTw&usqp=CAU";
-
-const nAvtr3 = "https://alphastyles.ru/wp-content/uploads/2018/09/dizayn-2.jpg";
-const nTxt3 = "<b>В автограде установят трехметровую скульптуру в виде челна. </b> В Набережных Челнах установят трехметровую скульптуру в виде герба города. Металлический челн под парусом появится в августе. Его изготовлением занимается одно из предприятий города, пишут «Челнинские известия»Идея установки скульптуры принадлежит благотворительному фонду «Люди Татарстана».";
-const nImg3 = "";
-
-const nAvtr4 = "https://ustinka.kz/upload/iblock/430/jf4z7zr60wq8dux0bgpxb4uu8fh2b54n/kakaya_pogoda_ozhidaet_kazakhstantsev_zimoy_s_noyabrya_2023_po_mart_2024-_1_.jpg";
-const nTxt4 = "<b>В пятницу в Тюменская область передохнет от морозов.</b> В пятницу в Тюменской области морозы немного ослабнут, местами пройдет снег. Ветер усилится, облака затянут небо, атмосферное давление приходит в норму. В Тюмени утром -30 градусов, юго-восточный ветер, днем -26 градусов, облачно, ближе к вечеру снег. Вечером — 19 градусов, южный ветер, ветер до 12 м/с. В Заводоуковске утром -32 градусов, днем -21 градус, облачно, ветер до 12 м/с. К вечеру -20 градусов. В Ишиме утром -35 градусов, юго-восточный ветер, днем -27 градусов, ветер до 11 м/с, облачно с прояснениями, к вечеру -21 градус. В Тобольске с утра -30 градусов, днем -24 градуса, облачно. К вечеру -20 градусов, снег, юго-восточный ветер. В Ялуторовске с утра -30 градусов, юго-восточный ветер. Днем -22 градуса, облачно. К вечеру -20 градусов, ветер до 12 м/с. По народным приметам, если вечером на небе появились облака – жди перемены погоды.";
-const nImg4 = "https://i.pinimg.com/736x/90/23/a0/9023a0492091392338d04a31247adbaf.jpg";
-
-for (const i = 0; i < 100; i++) {
-    const nPst1 = pst.cloneNode(true);
-    const nAvtrEl1 = nPst1.querySelector(".avtr");
-    const nAuth1 = nPst1.querySelector(".auth");
-    const nTxtEl1 = nPst1.querySelector(".txt");
-    const nImgEl1 = nPst1.querySelector(".img");
-
-    nAvtrEl1.setAttribute("src", nAvtr1);
-    nAuth1.textContent = "ВСЕ О СОБАКАХ";
-    nTxtEl1.textContent = nTxt1;
-    nImgEl1.setAttribute("src", nImg1);
-
-    pstBox.appendChild(nPst1);
-
-    const nPst2 = pst.cloneNode(true);
-    const nAvtrEl2 = nPst2.querySelector(".avtr");
-    const nAuth2 = nPst2.querySelector(".auth");
-    const nTxtEl2 = nPst2.querySelector(".txt");
-    const nImgEl2 = nPst2.querySelector(".img");
-
-    nAvtrEl2.setAttribute("src", nAvtr2);
-    nAuth2.textContent = "Dr. Dolph";
-    nTxtEl2.innerHTML = nTxt2;
-    nImgEl2.setAttribute("src", nImg2);
-
-    pstBox.appendChild(nPst2);
-
-    const nPst3 = pst.cloneNode(true);
-    const nAvtrEl3 = nPst3.querySelector(".avtr");
-    const nAuth3 = nPst3.querySelector(".auth");
-    const nTxtEl3 = nPst3.querySelector(".txt");
-    const nImgEl3 = nPst3.querySelector(".img");
-
-    nAvtrEl3.setAttribute("src", nAvtr3);
-    nAuth3.textContent = "BlvdPress";
-    nTxtEl3.innerHTML = nTxt3;
-    nImgEl3.setAttribute("src", nImg3);
-
-    pstBox.appendChild(nPst3);
-
-    const nPst4 = pst.cloneNode(true);
-    const nAvtrEl4 = nPst4.querySelector(".avtr");
-    const nAuth4 = nPst4.querySelector(".auth");
-    const nTxtEl4 = nPst4.querySelector(".txt");
-    const nImgEl4 = nPst4.querySelector(".img");
-
-    nAvtrEl4.setAttribute("src", nAvtr4);
-    nAuth4.textContent = "DailyWeather";
-    nTxtEl4.innerHTML = nTxt4;
-    nImgEl4.setAttribute("src", nImg4);
-
-    pstBox.appendChild(nPst4);
-}
-</script>
-
+    <div class="blackdiv blackdiv2">
+        <div class="text-animation">
+            <h1>ABOUT ME</h1>
+            <p class="typing-animation">I am a ninth grade student from the Kazakhstan Fizmat school (Republican Physics and Mathematics School). I am interested in Olympiad physics.</p>
+        </div>
+    </div>
+    <div class="whitediv1">
+        <h2 class="typing-animation">MY SKILLS</h2>
+        <div class="skill-container">
+            <div class="skill-name">Math    :</div>
+            <div class="skill-level">
+                <div class="circle filled"></div>
+                <div class="circle filled"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">Physics:</div>
+            <div class="skill-level">
+                <div class="circle filled"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">IT:</div>
+            <div class="skill-level">
+                <div class="circle filled"></div>
+                <div class="circle filled"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">English:</div>
+            <div class="skill-level">
+                <div class="circle filled"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <div class="skill-name">PE:</div>
+            <div class="skill-level">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+    <div class="blackdiv3">
+        <h1 style="color: white;display: flex; font-size: 3em; margin-top: 100px; margin-left: 30px; text-align: center;">My Projects</h1>
+        <div class="project-container">
+            <div class="project-box" style="margin-right: 30px;">
+                <img src="https://code.visualstudio.com/assets/blogs/2021/10/20/vscode-dev.png" alt="Project 1">
+                <p>project 1</p>
+            </div>
+            <div class="project-box">
+                <img src="https://play-lh.googleusercontent.com/0ynzKm6Uup2jd3Rdh1c-pwEA0sudtpp9ItULI8a-BdLSjht27ZSmD3x-O3VitcvnjIY=w526-h296-rw" alt="Project 2">
+                <p>project 2</p>
+            </div>
+        </div> 
+    </div>
+        <div class="spacebetween"></div>
+        <div class="blackdiv4">
+            <h1 style="text-align: ">My Blog</h1>
+            <div style="align-items: center;">
+                <div class="tetraedr1">
+                    <a href="https://medium.com/me/stories/public#:~:text=Responses-,Merge%20sort.,-%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D1%83%D1%8E!%20%D0%AD%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F">
+                        <img src="https://i.ibb.co.com/cgr2tr4/2024-04-16-23-39-41.png" style="border-radius: 30px;">
+                    </a>
+                    <div class="text-container">
+                        <h2>Sorting algorithm – Merge Sort</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="blackdiv5">
+            <div style="display: flex; align-items: center;">
+                <div class="tetraedr2">
+                    <a href="https://medium.com/me/stories/public#:~:text=2%20min%20read-,Bubble%20Sort,-Bubble%20sort%2C%20%D0%B0">
+                        <img src="https://i.ibb.co.com/SKt7n7V/2024-04-16-23-40-04.png" style="border-radius: 30px;">
+                    </a>
+                    <div class="text-container">
+                        <h2>Sorting algorithm – Bubble Sort</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="blackdiv6">
+            <div style="display: flex; align-items: center;">
+                <div class="tetraedr2" style="margin-bottom: 30px;">
+                    <a href="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCBsBWztFJT8eIIFbWZ2ak--4GdYaxD7VZ_A&s" style="border-radius: 30px;">
+                    </a>
+                    <div class="text-container">
+                        <h2>Sorting algorithm – Quick Sort</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
 </body>
 </html>
